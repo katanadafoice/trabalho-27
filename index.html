@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Efood 🛒</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li class="dropdown">
+                    <a href="#about" class="dropbtn">Sobre</a>
+                    <div class="dropdown-content">
+                        <a href="#team">Equipe</a>
+                        <a href="#company">Empresa</a>
+                    </div>
+                </li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="button"><button id="changeColorBtn">Mudar Cor de Fundo</button></div>
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        document.getElementById('changeColorBtn').addEventListener('click', function () {
+            document.body.style.backgroundColor = getRandomColor();
+        });
+    </script>
+
+    <div class="borda-css">
+        <h1 class="h1-login">LOGIN</h1>
+        <br><br>
+        <br>nome:<br>
+        <input type="text" name="caixanome" value="seu nome..">
+        <br>
+        <br>gmail:<br>
+        <input type="text" name="caixanome" value="...">
+        <br>
+        <br>senha<br>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <a href="Efood.html" class="adm-css">ENTRA</a>
+    </div>
+
+
+    <ul class="banof-pt">
+        <li><a href="LoginADM.html">Administração</a></li>
+    </ul>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
